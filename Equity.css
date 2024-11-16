@@ -1,0 +1,33 @@
+#dashboard{
+    display:none;
+}
+body{
+    display: flex;
+    background-color: rgb(243, 239, 239);
+}
+nav ,a{
+    display: block; 
+    text-decoration: none; 
+    padding-bottom: 20px;
+    padding-top: 5px;
+    height: 70%;
+    color: black;
+    font-weight: bolder;
+    gap: 20px;
+}
+nav,a>i{
+    gap: 10px;
+}
+nav a:hover{
+    color: red;
+}
+
+#menu{
+    background-color: white;
+    width: 100%;
+}
+#icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
