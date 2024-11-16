@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Equity.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Home Section Container */
+#home-section {
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+/* Greeting Section */
+#greeting {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+#greeting h1 {
+    font-size: 2rem;
+    color: #8B0000; /* Equity red */
+    margin: 0;
+}
+
+#greeting p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0 0;
+}
+
+/* Accounts Summary */
+#accounts-summary {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.account-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.account-card h3 {
+    font-size: 1.25rem;
+    color: #8B0000; /* Equity red */
+    margin: 0 0 0.5rem;
+}
+
+.account-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.account-card small {
+    font-size: 0.875rem;
+    color: #888;
+}
+
+/* Quick Actions Section */
+#quick-actions h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.action-item {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-item i {
+    font-size: 2rem;
+    color: #8B0000; /* Equity red */
+    margin-bottom: 0.5rem;
+}
+
+.action-item p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+.action-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #accounts-summary {
+        flex-direction: column;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+    <div id="home-section">
+        <!-- Greeting Section -->
+        <div id="greeting">
+            <h1 id="greeting-message">Good Afternoon</h1>
+            <p>Welcome back! Here’s an overview of your accounts and quick actions.</p>
+        </div>
+        
+    
+        <!-- Accounts Summary Section -->
+        <div id="accounts-summary">
+            <div class="account-card">
+                <h3>My Checking</h3>
+                <p>Ksh 150,000.00</p>
+                <small>Available Balance</small>
+            </div>
+            <div class="account-card">
+                <h3>My Savings</h3>
+                <p>Ksh 750,000.00</p>
+                <small>Available Balance</small>
+            </div>
+            <div class="account-card">
+                <h3>My Loans</h3>
+                <p>Ksh 50,000.00</p>
+                <small>Remaining Balance</small>
+            </div>
+        </div>
+    
+        <!-- Quick Actions Section -->
+        <div id="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="actions-grid">
+                <div class="action-item">
+                    <a href="#Transfer"></a>
+                    <i class="fas fa-exchange-alt"></i>
+                    <p>Transfer</p>
+                </div>
+                <div class="action-item">
+                    <a href="#Deposit"></a>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <p>Deposit</p>
+                </div>
+                <div class="action-item">
+                    <a href="#Borrow"></a>
+                    <i class="fas fa-university"></i>
+                    <p>Borrow</p>
+                </div>
+                <div class="action-item">
+                    <a href="#Save"></a>
+                    <i class="fas fa-wallet"></i>
+                    <p>Save</p>
+                </div>
+                <div class="action-item">
+                    <a href="#PayBills"></a>
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <p>Pay Bills</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Simulate collecting the username from login form
+            const loginForm = document.querySelector("form");
+            loginForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+        // Get the username from the input field
+            const username = document.getElementById("user").value;
+
+        // Update the greeting message
+            const greetingMessage = document.getElementById("greeting-message");
+
+        // Determine time of day for dynamic greeting
+            const hours = new Date().getHours();
+            let greetingTime = "Good Afternoon";
+            if (hours < 12) {
+                greetingTime = "Good Morning";
+            } else if (hours >= 17) {
+                greetingTime = "Good Evening";
+            }
+
+        // Set the personalized greeting
+            greetingMessage.textContent = `${greetingTime}, ${username}!`;
+
+        // Optionally, hide the login form and show the dashboard
+            document.getElementById("form").style.display = "none";
+            document.getElementById("dashboard").style.display = "block";
+        });
+
+    </script>
+</body>
+</html>

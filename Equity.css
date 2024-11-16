@@ -1,33 +1,126 @@
-#dashboard{
-    display:none;
-}
-body{
-    display: flex;
-    background-color: rgb(243, 239, 239);
-}
-nav ,a{
-    display: block; 
-    text-decoration: none; 
-    padding-bottom: 20px;
-    padding-top: 5px;
-    height: 70%;
-    color: black;
-    font-weight: bolder;
-    gap: 20px;
-}
-nav,a>i{
-    gap: 10px;
-}
-nav a:hover{
-    color: red;
+/* Hide dashboard by default */
+#dashboard {
+    display: none;
 }
 
-#menu{
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(243, 239, 239);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Sidebar Styles */
+#menu {
     background-color: white;
     width: 100%;
 }
-#icons{
+
+/* Menu Links */
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 5px 0 20px;
+    color: black;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* Icon Styling */
+#icons {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+nav, a > i {
+    gap: 10px;
+}
+
+/* Main Container Styles */
+#container {
+    display: grid;
+    grid-template-columns: 250px auto;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(243, 239, 239);
+}
+
+/* Center the Login Form */
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Take the full viewport height */
+    width: 100%; /* Take the full viewport width */
+    background-color: #f5f5f5; /* Light background for contrast */
+}
+
+/* Form Styling */
+#form form {
+    background-color: #ffffff; /* White background */
+    padding: 2rem;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Form width */
+    text-align: center;
+}
+
+/* Input Fields Styling */
+#form form input[type="text"],
+#form form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Input Focus Effect */
+#form form input[type="text"]:focus,
+#form form input[type="password"]:focus {
+    border-color: #8B0000; /* Equity red color */
+}
+
+/* Submit Button Styling */
+#form form input[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 1rem 0 0 0;
+    border: none;
+    background-color: #8B0000; /* Equity red color */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Submit Button */
+#form form input[type="submit"]:hover {
+    background-color: #660000; /* Darker red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
+
+    #form form {
+        width: 90%; /* Adjust form width for smaller screens */
+    }
 }

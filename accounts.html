@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    <link rel="stylesheet" href="Equity.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="Equity.js"></script>
+    <style>
+        /* Accounts Section Container */
+#accounts-summary {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+/* Individual Account Cards */
+.account-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px; /* Restrict card width */
+}
+
+/* Account Card Title */
+.account-card h3 {
+    font-size: 1.5rem;
+    color: #8B0000; /* Equity red */
+    margin: 0 0 1rem;
+}
+
+/* Balance Display */
+.account-card .balance {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* Small Text for Account Details */
+.account-card small {
+    font-size: 0.875rem;
+    color: #888;
+}
+
+/* Account Type & Number */
+.account-card .account-type,
+.account-card .account-number {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Progress Bar Container */
+.progress-container {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+/* Progress Fill */
+.progress {
+    height: 100%;
+    background-color: #8B0000; /* Equity red */
+    border-radius: 5px;
+}
+
+/* Hover Effect for Cards */
+.account-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Account Card Specific Styles */
+.account-card.checking {
+    border-left: 4px solid #1E90FF; /* Blue for Checking */
+}
+
+.account-card.savings {
+    border-left: 4px solid #32CD32; /* Green for Savings */
+}
+
+.account-card.loan {
+    border-left: 4px solid #FF4500; /* Orange for Loans */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #accounts-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .account-card {
+        max-width: 100%;
+    }
+}
+
+    </style>    
+</head>
+<body>
+    <!-- Accounts Section -->
+<div id="accounts-summary">
+    <div class="account-card checking">
+        <h3>My Checking</h3>
+        <p class="balance">Ksh 150,000.00</p>
+        <small>Available Balance</small>
+        <p class="account-type">Account Type: Checking</p>
+        <p class="account-number">Account No: 123-456-789</p>
+        <div class="progress-container">
+            <p>Spending Limit</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 60%;"></div>
+            </div>
+            <p>60% of your limit</p>
+        </div>
+    </div>
+    
+    <div class="account-card savings">
+        <h3>My Savings</h3>
+        <p class="balance">Ksh 750,000.00</p>
+        <small>Available Balance</small>
+        <p class="account-type">Account Type: Savings</p>
+        <p class="account-number">Account No: 987-654-321</p>
+        <div class="progress-container">
+            <p>Savings Goal</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;"></div>
+            </div>
+            <p>80% of your savings goal</p>
+        </div>
+    </div>
+    
+    <div class="account-card loan">
+        <h3>My Loans</h3>
+        <p class="balance">Ksh 50,000.00</p>
+        <small>Remaining Balance</small>
+        <p class="account-type">Account Type: Loan</p>
+        <p class="account-number">Account No: 555-123-777</p>
+        <div class="progress-container">
+            <p>Loan Repayment Progress</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 40%;"></div>
+            </div>
+            <p>40% of the loan repaid</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
