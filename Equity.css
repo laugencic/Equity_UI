@@ -11,23 +11,51 @@ nav ,a{
     padding-bottom: 20px;
     padding-top: 5px;
     height: 70%;
-    color: black;
+    color: rgb(87, 86, 86);
     font-weight: bolder;
     gap: 20px;
+    /* height: 50px; */
 }
-nav,a>i{
-    gap: 10px;
+
+nav{
+    padding-left: 15px;
+    display: none;
 }
 nav a:hover{
     color: red;
+    background-color: rgb(243, 239, 239);
+    border-left: 3px solid red;
+    border-radius: 10px;
 }
-
+    
+i{
+    margin-right: 30px;
+    font-weight: bolder;
+}
 #menu{
     background-color: white;
-    width: 100%;
+    width:20lh;
+    
 }
 #icons{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+#save,#lang{
+    padding-bottom: 50px;
+}
+#ham{
+    cursor: pointer;
+    padding-left: 30px;
+    border: none;
+    font-size: 35px;
+   
+}
+#ham:hover{
+    color: red;
+    font-weight: bolder;
+}
+#icons{
+    background-color: rgb(243, 239, 239);
 }

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded",function(){
-    document.getElementById("dashboard").style.display='none';
+    // document.getElementById("dashboard").style.display='none';
+    document.querySelector("nav").style.display='none'
     document.querySelector("form").onsubmit=function(event){
         event.preventDefault()
         let username=document.getElementById("user").value;
@@ -30,5 +31,14 @@ document.addEventListener("DOMContentLoaded",function(){
         document.getElementById("form").style.display='none'
         document.getElementById("dashboard").style.display='block';
 
+    }
+
+    document.getElementById("ham").onclick=function(){
+        if(document.querySelector("nav").style.display=='none'){
+            document.querySelector("nav").style.display='block'
+        }
+        else{
+            document.querySelector("nav").style.display='none'
+        }
     }
 })

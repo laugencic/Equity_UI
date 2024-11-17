@@ -110,8 +110,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Feel free to connect with me for any queries or suggestions!  
 - GitHub: [@john mary](https://github.com/okalmary254)
-- GitHub: [@laugencic](https://github.com/laugencic)  
-- Twitter: [@your-twitter-handle](https://twitter.com/jean__marie_)  
+- Twitter: [@your-twitter-handle](https://twitter.com/jean__marie_) 
 - Email: [okalmohn@proton.me](mailto:okalmohn@proton.me)
+- GitHub: [@laugencic](https://github.com/laugencic)  
+- Twitter: [@your-twitter-handle](https://twitter.com/thee__lau)  
+- Email: [okalmohn@proton.me](lawrencekamande23@gmail.com)
 
 ---
