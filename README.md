@@ -52,25 +52,6 @@ Ensure you have the following installed:
    start index.html
    
 
-## 📂 Project Structure
-
-
-equity-bank-ui/
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css       # Main stylesheet
-│   ├── js/
-│   │   └── script.js       # Main JavaScript file
-│   ├── images/             # All project images
-│
-├── index.html              # Home page
-├── login.html              # Login page
-└── README.md               # Project documentation
-
-
----
-
 ## 📝 Usage
 
 This project is primarily for educational purposes. You can:
